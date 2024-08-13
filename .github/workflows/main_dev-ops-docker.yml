@@ -31,7 +31,8 @@ jobs:
       with:
         push: true
         tags: index.docker.io/${{ secrets.AzureAppService_ContainerUsername_7574eeb4b39842ef98d322ef447bf139 }}/sarpreet97/react-app:${{ github.sha }}
-        file: ./Dockerfile
+        file: ./sarpreet-react-app/Dockerfile  # Updated path to Dockerfile
+        context: ./sarpreet-react-app  # Set context to the directory containing Dockerfile
 
   deploy:
     runs-on: ubuntu-latest
